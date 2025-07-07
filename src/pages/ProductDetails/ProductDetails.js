@@ -6,8 +6,10 @@ import { FaDownload } from "react-icons/fa";
 
 const tabs = [
   {
-    id: "Fiche Technique",
-    label: "Fiche Technique",
+    id: "Technical Sheet",
+    label: "Technical Sheet",
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   {
     id: "Description",
@@ -18,16 +20,8 @@ const tabs = [
   {
     id: "Video",
     label: "Video",
-    content: (
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/watch?v=6e0yIRDVPlA&list=RD6e0yIRDVPlA&start_radio=1"
-        title="YouTube Video"
-        frameBorder="0"
-        allowFullScreen
-      ></iframe>
-    ),
+    content:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic excepturi quibusdam odio deleniti reprehenderit facilis.",
   },
   // Add more tabs as needed
 ];

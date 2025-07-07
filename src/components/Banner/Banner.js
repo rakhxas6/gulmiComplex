@@ -44,7 +44,7 @@ const CustomSlide = ({ Subtext, imgSrc, text, buttonLink, buttonText }) => (
         {Subtext}
       </p>
 
-      <Link to="/about">
+      <Link to={buttonLink}>
         <button className="bg-primeColor text-white text-lg font-bodyFont w-[185px] h-[50px] hover:bg-black duration-300 font-bold">
           {buttonText}
         </button>
@@ -59,7 +59,7 @@ const CustomSlide = ({ Subtext, imgSrc, text, buttonLink, buttonText }) => (
 const Banner = () => {
   const [dotActive, setDocActive] = useState(0);
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     slidesToShow: 1,
@@ -155,7 +155,7 @@ const Banner = () => {
       text: "Enhance Your Printing Experience",
       Subtext:
         "Explore our premium printers and consumables for exceptional results",
-      buttonLink: "/offer",
+      buttonLink: "/shop",
       buttonText: "Shop Now",
     },
     {
@@ -163,7 +163,7 @@ const Banner = () => {
       text: "Quality Printing Solutions",
       Subtext:
         "Discover our wide range of printers and consumables designed for professional printing needs.",
-      buttonLink: "/shop",
+      buttonLink: "/about",
       buttonText: "About-us",
     },
     {

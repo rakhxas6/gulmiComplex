@@ -1,4 +1,5 @@
-import logo from "./orebiLogo.png";
+// import logo from "./orebiLogo.png";
+import logo from "./GulmiComplexLogo.png";
 import logoLight from "./logoLight.png";
 import bannerImgOne from "./banner/bannerImgOne.webp";
 import bannerImgTwo from "./banner/bannerImgTwo.webp";
