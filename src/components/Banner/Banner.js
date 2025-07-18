@@ -86,7 +86,7 @@ const Banner = () => {
       {
         breakpoint: 576,
         settings: {
-          dots: true,
+          dots: false,
           appendDots: (dots) => (
             <div
               style={{
@@ -137,7 +137,7 @@ const Banner = () => {
       buttonText: "Shop Now",
     },
     {
-      imgSrc: bannerImgTwo,
+      imgSrc: bannerImgOne,
       text: "Quality Printing Solutions",
       Subtext:
         "Discover our wide range of printers and consumables designed for professional printing needs.",
@@ -145,7 +145,7 @@ const Banner = () => {
       buttonText: "About-us",
     },
     {
-      imgSrc: bannerImgThree,
+      imgSrc: bannerImgOne,
       text: "Efficiency Redefined",
       Subtext:
         "Maximize productivity with our advanced printers and high-quality consumables.",

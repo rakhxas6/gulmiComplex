@@ -26,11 +26,11 @@ const features = [
 const BannerBottom = () => {
   return (
     <div className="w-full bg-white border-b border-gray-200 px-4 py-6">
-      <div className="max-w-container mx-auto grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+      <div className="max-w-container mx-auto grid gap-6  sm:grid-cols-1 md:grid-cols-3">
         {features.map((item, index) => (
           <div
             key={index}
-            className="flex items-start gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300"
+            className="flex items-st gap-4 p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition duration-300"
           >
             <span className="flex-shrink-0">{item.icon}</span>
             <div>
