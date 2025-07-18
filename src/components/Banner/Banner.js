@@ -9,9 +9,14 @@ import {
 import Image from "../designLayouts/Image";
 
 const CustomSlide = ({ Subtext, imgSrc, text, buttonLink, buttonText }) => (
-  <div className="flex flex-col md:flex-row items-center justify-center bg-[#F5F5F3] p-4 md:p-10">
+  <div className="flex flex-col-reverse md:flex-row items-center justify-center bg-[#F5F5F3] p-4 md:p-10">
+    {/* Image Section */}
+    <div className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px] mt-6 md:mt-0 md:ml-10">
+      <Image imgSrc={imgSrc} />
+    </div>
+
     {/* Text Section */}
-    <div className="max-w-[450px] mb-6 md:mb-0 md:mr-10 text-center md:text-left">
+    <div className="max-w-[450px] text-center md:text-left">
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
         {text}
       </h1>
@@ -24,13 +29,9 @@ const CustomSlide = ({ Subtext, imgSrc, text, buttonLink, buttonText }) => (
         </button>
       </Link>
     </div>
-
-    {/* Image Section */}
-    <div className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px]">
-      <Image imgSrc={imgSrc} />
-    </div>
   </div>
 );
+
 
 const Banner = () => {
   const [dotActive, setDotActive] = useState(0);
