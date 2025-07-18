@@ -9,55 +9,32 @@ import {
 import Image from "../designLayouts/Image";
 
 const CustomSlide = ({ Subtext, imgSrc, text, buttonLink, buttonText }) => (
-  <div
-    style={{
-      position: "relative",
-      backgroundColor: "#F5F5F3", // Gray background color
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center", // Center vertically
-    }}
-  >
-    <div
-      style={{
-        maxWidth: "450px", // Adjust the maxWidth as needed
-        marginRight: "100px", // Add margin between text/button and image
-      }}
-    >
-      <h1
-        style={{
-          marginBottom: "15px",
-          fontSize: "2.5rem", // Adjust the font size as needed
-          color: "#000", // Black color
-          fontWeight: "700",
-        }}
-      >
+  <div className="flex flex-col md:flex-row items-center justify-center bg-[#F5F5F3] p-4 md:p-10">
+    {/* Text Section */}
+    <div className="max-w-[450px] mb-6 md:mb-0 md:mr-10 text-center md:text-left">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-black mb-4">
         {text}
       </h1>
-      <p
-        style={{
-          marginBottom: "25px",
-          fontSize: "1.5rem", // Adjust the font size as needed
-          color: "#666", // Gray color
-        }}
-      >
+      <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6">
         {Subtext}
       </p>
-
       <Link to={buttonLink}>
-        <button className="bg-primeColor text-white text-lg font-bodyFont w-[185px] h-[50px] hover:bg-black duration-300 font-bold">
+        <button className="bg-primeColor text-white text-base sm:text-lg w-[160px] sm:w-[185px] h-[45px] sm:h-[50px] font-semibold hover:bg-black duration-300">
           {buttonText}
         </button>
       </Link>
     </div>
-    <div style={{ marginLeft: "100px" }}>
+
+    {/* Image Section */}
+    <div className="w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px]">
       <Image imgSrc={imgSrc} />
     </div>
   </div>
 );
 
 const Banner = () => {
-  const [dotActive, setDocActive] = useState(0);
+  const [dotActive, setDotActive] = useState(0);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -67,7 +44,7 @@ const Banner = () => {
     adaptiveHeight: true,
     arrows: false,
     beforeChange: (prev, next) => {
-      setDocActive(next);
+      setDotActive(next);
     },
     appendDots: (dots) => (
       <div
@@ -78,7 +55,7 @@ const Banner = () => {
           transform: "translateY(-50%)",
         }}
       >
-        <ul style={{ margin: "0px" }}> {dots} </ul>
+        <ul style={{ margin: "0px" }}>{dots}</ul>
       </div>
     ),
     customPaging: (i) => (
@@ -118,7 +95,7 @@ const Banner = () => {
                 transform: "translateY(-50%)",
               }}
             >
-              <ul style={{ margin: "0px" }}> {dots} </ul>
+              <ul style={{ margin: "0px" }}>{dots}</ul>
             </div>
           ),
           customPaging: (i) => (
@@ -159,7 +136,7 @@ const Banner = () => {
       buttonText: "Shop Now",
     },
     {
-      imgSrc: bannerImgOne,
+      imgSrc: bannerImgTwo,
       text: "Quality Printing Solutions",
       Subtext:
         "Discover our wide range of printers and consumables designed for professional printing needs.",
@@ -167,18 +144,17 @@ const Banner = () => {
       buttonText: "About-us",
     },
     {
-      imgSrc: bannerImgOne,
+      imgSrc: bannerImgThree,
       text: "Efficiency Redefined",
       Subtext:
-        "Maximize productivity with our advanced printers and high-quality consumables. ",
+        "Maximize productivity with our advanced printers and high-quality consumables.",
       buttonLink: "/contact",
       buttonText: "Contact-us",
     },
-
-    // Add more slides as needed
   ];
+
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white relative">
       <Slider {...settings}>
         {slides.map((slide, index) => (
           <CustomSlide key={index} {...slide} />
